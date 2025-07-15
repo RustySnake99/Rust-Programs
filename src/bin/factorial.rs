@@ -1,19 +1,20 @@
 use std::io::{self, Write};
 
-fn facrotial(x: u32) -> u64 {
-  if x <= 2 {
-    x
-  } else {
-    x * factorial(x - 1)
-  }
+fn factorial(n: u64) -> u64 {
+    if n <= 2 {
+        n
+    } else {
+        n  * factorial(n - 1)
+    }
 }
-
 fn main() {
-  let mut input = String::new();
-  print!("Enter the number: ");
-  io::stdout().flush().unwrap();
-  io::stdin().read_line(&mut input).unwrap();
+    let mut input = String::new();
 
-  let n: u32 = input.trim().parse().unwrap();
-  println!("Factorial of {} = {}", n, factorial(n));
+    print!("Enter a number: ");
+    io::stdout().flush().unwrap();
+
+    io::stdin().read_line(&mut input).unwrap();
+    let number: u64 = input.trim().parse().unwrap();
+
+    println!("The factorial of {} is {}", number, factorial(number));
 }
