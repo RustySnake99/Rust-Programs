@@ -15,6 +15,6 @@ Then, to build and run the project, use the command: `cargo run`. Other commands
 An example of a Rust program is:
 ```
 fn main() {
-  pritnln!("Hello World!");
+  println!("Hello World!");
 }
 ```
